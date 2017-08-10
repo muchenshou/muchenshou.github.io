@@ -1,6 +1,15 @@
 <!DOCYPTE html>
-<html><head><title>Contents</title></head>
+<html><head><title>Contents</title>
+<style type="text/css">
+#container {
+    max-width: 800px;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+</style>
+</head>
 <body>
+    <div id="container">
 <h1>利用shadowsocks建立一个局域网内的vpn server</h1>
 
 <p>这里利用了两篇文章</p>
@@ -13,4 +22,5 @@
 <p>第一篇是讲如何建立pptpd服务的，建立好后可以直接在android，ios的系统自带vpn使用。</p>
 
 <p>第二篇是讲如何建立ss-redir服务,并利用iptables进行nat重定向，将pptpd的流量转入ss-redir服务，中间需要一个shadowsocks的账号</p>
+</div>
 </body></html>
