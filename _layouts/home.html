@@ -19,16 +19,16 @@ layout: default
       </div>
       {% endif %}
       <span>
-          <header>
-            <h1>
+          <div>
+            <h3>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                 {{ post.title }}
               </a>
-            </h1>
+            </h3>
             <p class="meta">
               {{ post.date | date: "%B %-d, %Y" }}
             </p>
-          </header>
+          </div>
           <div class="excerpt">
               {{ post.excerpt | strip_html }}
             <!--{{ post.content | strip_html | truncate: "250" }}-->
