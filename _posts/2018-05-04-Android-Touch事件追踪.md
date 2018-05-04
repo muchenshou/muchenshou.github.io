@@ -11,7 +11,14 @@ Touch事件的前世今生还是比较复杂的，涉及到多方代码。
 
 ViewRootImpl.setView这个方法是核心。
 
-    InputChannel --> WindowInputEventReceiver   --> InputStage(So many child class, 传递到View是在ViewPostImeInputStage)-->  View.dispatchPointerEvent --> DecorView.dipatchTouchEvent(每个Activity和Dialog的window的直接View是DecorView) --> call Activity.dispatchTouchEvent --> call DecorView.superDispatchTouchEvent (前面这两步像扔飞去来一样，又回到自己怀里了) --> ViewGroup.dispatchTouchEvent
+    InputChannel 
+    --> WindowInputEventReceiver   
+    --> InputStage(So many child class, 传递到View是在ViewPostImeInputStage)
+    -->  View.dispatchPointerEvent 
+    --> DecorView.dipatchTouchEvent(每个Activity和Dialog的window的直接View是DecorView) 
+    --> call Activity.dispatchTouchEvent 
+    --> call DecorView.superDispatchTouchEvent (前面这两步像扔飞去来一样，又回到自己怀里了) 
+    --> ViewGroup.dispatchTouchEvent
 
 
 到最后一步我们就熟悉了，dispatchTouchEvent onInterceptTouchEvent onTouchEvent。
