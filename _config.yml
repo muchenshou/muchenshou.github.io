@@ -73,7 +73,7 @@ theme_settings:
   
 
 # PAGINATION
-paginate: 5
+paginate: 15
 paginate_path: "blog/page:num"
 
 
